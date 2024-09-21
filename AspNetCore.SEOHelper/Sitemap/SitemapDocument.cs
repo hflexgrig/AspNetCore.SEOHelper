@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
 
@@ -12,7 +13,9 @@ namespace AspNetCore.SEOHelper.Sitemap
         public void CreateSitemapXML(IEnumerable<SitemapNode> sitemapNodes, string directoryPath)
         {
             XNamespace xmlns = "http://www.sitemaps.org/schemas/sitemap/0.9";
-            XElement root = new XElement(xmlns + "urlset");
+            XNamespace image = "http://www.google.com/schemas/sitemap-image/1.1";
+
+            XElement root = new XElement(xmlns + "urlset", new XAttribute(XNamespace.Xmlns + "image", image));
 
             foreach (SitemapNode sitemapNode in sitemapNodes)
             {
@@ -27,7 +30,8 @@ namespace AspNetCore.SEOHelper.Sitemap
                         sitemapNode.Frequency.Value.ToString().ToLowerInvariant()),
                     sitemapNode.Priority == null ? null : new XElement(
                         xmlns + "priority",
-                        sitemapNode.Priority.Value.ToString("F1", CultureInfo.InvariantCulture)));
+                        sitemapNode.Priority.Value.ToString("F1", CultureInfo.InvariantCulture)),
+                    sitemapNode.Images?.Count > 0 ? sitemapNode.Images.Select(x => new XElement(image + "image", new XElement(image + "loc", x)))  : null);
                 root.Add(urlElement);
             }
 

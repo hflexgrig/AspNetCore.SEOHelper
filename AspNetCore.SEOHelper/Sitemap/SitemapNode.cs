@@ -1,4 +1,6 @@
-﻿using System;
+﻿#nullable enable
+using System;
+using System.Collections.Generic;
 
 namespace AspNetCore.SEOHelper.Sitemap
 {
@@ -8,6 +10,8 @@ namespace AspNetCore.SEOHelper.Sitemap
         public DateTime? LastModified { get; set; }
         public double? Priority { get; set; }
         public string Url { get; set; }
+        
+        public IList<string>? Images { get; set; } 
     }
 
     internal class SitemapNodeSetter

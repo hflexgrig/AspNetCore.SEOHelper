@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://codingwithesty.com/serilog-mongodb-in-asp-net-core</loc>
+    <lastmod>2024-09-21T12:47:21+04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codingwithesty.com/logging-in-asp-net-core</loc>
+    <lastmod>2024-09-21T12:47:21+04:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codingwithesty.com/robots-txt-in-asp-net-core</loc>
+    <lastmod>2024-09-21T12:47:21+04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://codingwithesty.com/versioning-asp.net-core-apiIs-with-swagger</loc>
+    <lastmod>2024-09-21T12:47:21+04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://codingwithesty.com/configuring-swagger-asp-net-core-web-api</loc>
+    <lastmod>2024-09-21T12:47:21+04:00</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.4</priority>
+    <image:image>
+      <image:loc>https://somedomain.com/image1.jpg</image:loc>
+    </image:image>
+  </url>
+</urlset>
